@@ -1,0 +1,563 @@
+<title>Smartec Fixed</title>
+<meta name="description" content="Fire compliance, fixed. Scheduled fire alarm testing, a free digital logbook and compliance portal from £29.99 + VAT per month. Book a free compliance check.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  color-scheme:light;
+  --navy:#031C2C;--navy-2:#0B283A;--navy-3:#12354B;--navy-line:rgba(255,255,255,.12);
+  --lav:#9695D2;--lav-hover:#AAA9DE;--lav-deep:#5452A0;--lav-tint:#EEEEF9;
+  --cream:#FCFAF6;--white:#FFFFFF;
+  --ink:#0E1B26;--muted:#56636E;--faint:#8A96A0;--line:#E6E2DA;
+  --on-navy:#F3F5F7;--on-navy-2:#AEBBC6;
+  --green:#3DDC84;--green-ink:#15803D;--red:#E5534B;
+  --focus:#5452A0;
+  --font:"Outfit",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--cream);color:var(--ink);font:400 17px/1.6 var(--font);-webkit-font-smoothing:antialiased;padding-bottom:72px}
+@media (min-width:900px){body{padding-bottom:0}}
+:focus-visible{outline:3px solid var(--lav);outline-offset:2px;border-radius:6px}
+.wrap{max-width:1120px;margin-inline:auto;padding-inline:20px}
+@media (max-width:420px){.wrap{padding-inline:16px}}
+h1,h2,h3{font-weight:600;line-height:1.12;letter-spacing:-.015em;margin:0;text-wrap:balance}
+h1{font-size:clamp(2rem,3.8vw,3rem)}
+h2{font-size:clamp(1.6rem,2.6vw,2.15rem)}
+h3{font-size:1.08rem}
+p{margin:0}
+section{padding-block:clamp(48px,6.5vw,76px)}
+.eyebrow{font-size:.74rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--lav-deep)}
+.head{display:grid;gap:10px;margin-bottom:32px;max-width:620px}
+.head p{color:var(--muted)}
+.dark{background:var(--navy);color:var(--on-navy)}
+.dark .eyebrow{color:var(--lav)}
+.dark .head p{color:var(--on-navy-2)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 24px;border-radius:999px;border:0;font:600 1rem/1 var(--font);text-decoration:none;cursor:pointer;white-space:nowrap;transition:background .15s,transform .15s}
+.btn-lav{background:var(--lav);color:var(--navy);box-shadow:0 6px 18px -8px rgba(150,149,210,.8)}
+.btn-lav:hover{background:var(--lav-hover)}
+.btn-lav:active{transform:translateY(1px)}
+.btn-ghost{background:transparent;color:var(--navy);border:1.5px solid var(--line)}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:var(--navy);border-bottom:1px solid var(--navy-line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:68px}
+.logo{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font:500 1.45rem/1 var(--font);letter-spacing:-.01em}
+.logo svg{width:26px;height:34px}
+.top-r{display:flex;align-items:center;gap:18px}
+.call{color:var(--on-navy-2);text-decoration:none;font-size:.95rem;display:flex;align-items:center;gap:6px}
+.call b{color:#fff;font-weight:600;font-variant-numeric:tabular-nums}
+.top .btn{min-height:42px;padding:0 18px;font-size:.92rem}
+@media (max-width:680px){.call{display:none}}
+
+/* hero */
+.hero{padding-block:clamp(28px,5vw,60px) clamp(40px,5vw,64px)}
+.hero .wrap{display:grid;gap:30px;grid-template-columns:1fr;align-items:start}
+@media (min-width:960px){.hero .wrap{grid-template-columns:minmax(0,1fr) 450px;gap:56px}}
+.hero-copy{display:grid;gap:18px;padding-top:4px}
+.status{justify-self:start;display:inline-flex;align-items:center;gap:9px;padding:6px 13px;border-radius:999px;background:rgba(61,220,132,.1);border:1px solid rgba(61,220,132,.25);color:#9CEFC0;font-size:.82rem;font-weight:500}
+.status i{width:7px;height:7px;border-radius:50%;background:var(--green);animation:blink 2.4s infinite}
+@keyframes blink{50%{opacity:.35}}
+.hero h1{color:#fff}
+.hero h1 em{font-style:normal;color:var(--lav)}
+.hero .sub{color:var(--on-navy-2);font-size:1.08rem;max-width:52ch}
+.rating{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;font-size:.92rem;color:var(--on-navy-2)}
+.stars{display:flex;gap:2px;color:#F5B83D}
+.stars svg{width:17px;height:17px}
+.rating b{color:#fff}
+.rating .sep{width:1px;height:16px;background:var(--navy-line)}
+.ticks{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 18px;font-size:.88rem;color:var(--on-navy-2)}
+.ticks li{display:flex;align-items:center;gap:6px}
+.ticks svg{width:15px;height:15px;color:var(--lav)}
+@media (max-width:959px){
+  .hero-copy{display:contents}
+  .status{order:1}.hero h1{order:2}.hero .sub{order:3}.card{order:4}.rating{order:5}.ticks{order:6}
+}
+
+/* form card */
+.card{background:#fff;color:var(--ink);border-radius:18px;box-shadow:0 24px 50px -20px rgba(0,0,0,.6);scroll-margin-top:84px;overflow:hidden}
+.card-top{padding:22px 22px 0;display:grid;gap:4px}
+.card-top h2{font-size:1.35rem;color:var(--lav-deep)}
+.card-top p{color:var(--muted);font-size:.92rem}
+.bar{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:12px}
+.bar span{height:4px;border-radius:2px;background:var(--lav-tint)}
+.bar span.on{background:var(--lav)}
+.card-body{padding:18px 22px 22px}
+.step{display:grid;gap:14px}
+.q{font-weight:600;font-size:.98rem}
+.q small{display:block;font-weight:400;color:var(--faint);font-size:.84rem;margin-top:1px}
+fieldset{border:0;margin:0;padding:0;min-width:0;display:grid;gap:10px}
+legend{padding:0}
+.chips{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.chips.two-col{grid-template-columns:repeat(2,minmax(0,1fr))}
+.opt{position:relative}
+.opt input{position:absolute;inset:0;opacity:0;margin:0;cursor:pointer}
+.opt label{display:flex;align-items:center;justify-content:center;text-align:center;min-height:46px;padding:6px 10px;border:1.5px solid var(--line);border-radius:12px;font-weight:500;font-size:.92rem;line-height:1.2;cursor:pointer;transition:border-color .15s,background .15s}
+.opt input:hover+label{border-color:#CFCBE9}
+.opt input:checked+label{border-color:var(--lav);background:var(--lav-tint);color:var(--navy)}
+.opt input:focus-visible+label{outline:3px solid var(--lav);outline-offset:2px}
+.field{display:grid;gap:5px}
+.field label{font-weight:500;font-size:.88rem}
+.field label span{color:var(--faint);font-weight:400}
+.field input{width:100%;min-height:48px;padding:0 14px;font:400 1rem var(--font);color:var(--ink);background:#fff;border:1.5px solid #DDD8CF;border-radius:10px;appearance:none;-webkit-appearance:none}
+.field input:focus{outline:none;border-color:var(--lav);box-shadow:0 0 0 3px rgba(150,149,210,.3)}
+.field [aria-invalid="true"]{border-color:var(--red)}
+.err{color:#C0342C;font-size:.84rem;font-weight:500}
+.err:empty{display:none}
+.row2{display:grid;gap:12px}
+@media (min-width:480px){.row2{grid-template-columns:1fr 1fr}}
+.nav{display:flex;gap:8px;align-items:center}
+.nav .btn-lav{flex:1}
+.back{background:none;border:0;color:var(--muted);font:500 .95rem var(--font);cursor:pointer;padding:10px 6px;text-decoration:underline;text-underline-offset:3px}
+.consent{display:flex;gap:9px;font-size:.82rem;color:var(--muted);line-height:1.45}
+.consent input{width:17px;height:17px;margin:2px 0 0;flex:none;accent-color:var(--lav-deep)}
+.small{font-size:.8rem;color:var(--faint);text-align:center;display:flex;gap:6px;align-items:center;justify-content:center;margin-top:12px}
+.small svg{width:14px;height:14px;color:var(--green-ink)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.done{display:grid;gap:12px}
+.done-ico{width:48px;height:48px;border-radius:50%;background:var(--lav-tint);color:var(--lav-deep);display:grid;place-items:center}
+.done-ico svg{width:24px;height:24px}
+.done ol{margin:0;padding-left:20px;display:grid;gap:5px;color:var(--muted)}
+.ref{font-size:.82rem;color:var(--faint)}
+
+/* trust strip */
+.trust{background:#fff;border-bottom:1px solid var(--line);padding-block:22px}
+.trust .wrap{display:flex;flex-wrap:wrap;gap:18px 40px;align-items:center;justify-content:space-between}
+.accs{display:flex;flex-wrap:wrap}
+.acc{padding:2px 20px;border-left:1px solid var(--line);display:grid;gap:1px}
+.acc:first-child{padding-left:0;border-left:0}
+.acc b{font-weight:600;font-size:.98rem}
+.acc span{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--lav-deep)}
+.clients{font-size:.9rem;color:var(--muted);max-width:420px}
+.clients b{color:var(--ink);font-weight:600}
+@media (max-width:560px){.acc{padding:2px 12px}}
+
+/* old vs fixed */
+.vs{background:var(--lav)}
+.vs .eyebrow{color:var(--navy)}
+.vs h2{color:var(--navy)}
+.vs-grid{display:grid;gap:14px;grid-template-columns:1fr}
+@media (min-width:820px){.vs-grid{grid-template-columns:1fr 1fr;gap:18px}}
+.col{border-radius:16px;padding:24px;display:grid;gap:16px;align-content:start}
+.col-old{background:rgba(3,28,44,.08)}
+.col-new{background:var(--navy);color:var(--on-navy)}
+.col h3{font-size:1.15rem;color:var(--navy)}
+.col-new h3{color:#fff}
+.col ul{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.col li{display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:start}
+.col li svg{width:20px;height:20px;margin-top:2px}
+.col-old li{color:#1B2A57}
+.col-old li svg{color:#8B2E2A}
+.col-new li svg{color:var(--lav)}
+.col li b{display:block;font-weight:600}
+.col-old li b{color:var(--navy)}
+.col-new li span{color:var(--on-navy-2)}
+
+/* pricing */
+.price-grid{display:grid;gap:36px;grid-template-columns:1fr;align-items:center}
+@media (min-width:900px){.price-grid{grid-template-columns:1fr 400px;gap:64px}}
+.feat{list-style:none;margin:0;padding:0;display:grid;gap:18px;grid-template-columns:1fr}
+@media (min-width:560px){.feat{grid-template-columns:1fr 1fr}}
+.feat li{display:grid;grid-template-columns:28px 1fr;gap:12px}
+.feat .ck{width:28px;height:28px;border-radius:8px;background:rgba(150,149,210,.16);color:var(--lav);display:grid;place-items:center}
+.feat .ck svg{width:16px;height:16px}
+.feat b{display:block;color:#fff;font-weight:600;font-size:.98rem}
+.feat span{color:var(--on-navy-2);font-size:.92rem;line-height:1.5}
+.price{background:radial-gradient(120% 90% at 50% 0%,#1B3E63 0%,var(--navy-2) 60%);border:1px solid var(--navy-line);border-radius:20px;padding:30px 26px;text-align:center;display:grid;gap:14px;justify-items:center}
+.price .eyebrow{color:var(--on-navy-2)}
+.amount{font-size:3.6rem;font-weight:700;line-height:1;color:#fff;letter-spacing:-.03em}
+.amount sup{font-size:1.5rem;vertical-align:top;position:relative;top:.35em;margin-right:2px}
+.per{color:var(--on-navy-2);font-size:.92rem;margin-top:-6px}
+.price .btn{width:100%}
+.price small{color:var(--on-navy-2);font-size:.8rem;line-height:1.45;max-width:32ch}
+
+/* steps */
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:22px;grid-template-columns:1fr}
+@media (min-width:820px){.steps{grid-template-columns:repeat(3,1fr);gap:32px}}
+.steps li{display:grid;gap:10px;align-content:start}
+.steps b{width:34px;height:34px;border-radius:50%;background:var(--lav);color:var(--navy);display:grid;place-items:center;font-weight:600}
+.steps p{color:var(--muted);font-size:.95rem}
+
+/* proof */
+.proof .wrap{display:grid;gap:32px;grid-template-columns:1fr;align-items:center}
+@media (min-width:900px){.proof .wrap{grid-template-columns:1.2fr .8fr;gap:64px}}
+blockquote{margin:0;display:grid;gap:14px}
+blockquote p{font-size:clamp(1.3rem,2.2vw,1.65rem);line-height:1.35;color:#fff;font-weight:500;letter-spacing:-.01em}
+blockquote cite{font-style:normal;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--lav)}
+.names{list-style:none;margin:0;padding:22px;display:grid;gap:10px;border:1px solid var(--navy-line);border-radius:16px;background:var(--navy-2)}
+.names li{display:flex;align-items:center;gap:10px;color:var(--on-navy);font-size:.95rem}
+.names li svg{width:15px;height:15px;color:var(--lav);flex:none}
+.names .lbl{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--on-navy-2);margin-bottom:4px}
+
+/* faq */
+.faq{max-width:800px;display:grid;gap:10px}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:12px}
+.faq summary{list-style:none;cursor:pointer;padding:16px 48px 16px 18px;font-weight:600;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:1.4rem;font-weight:500;color:var(--lav-deep)}
+.faq details[open] summary::after{content:"\2212"}
+.faq details p{padding:0 18px 16px;color:var(--muted);max-width:68ch}
+
+/* final */
+.final{text-align:center;background:linear-gradient(135deg,var(--navy) 0%,#0B1622 100%)}
+.final .wrap{display:grid;gap:14px;justify-items:center}
+.final h2{color:var(--lav)}
+.final p{color:var(--on-navy-2);max-width:48ch}
+.final-ctas{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;justify-content:center;margin-top:8px}
+.final .call{display:flex}
+
+footer{background:var(--navy);border-top:1px solid var(--navy-line);color:var(--on-navy-2);padding-block:28px;font-size:.84rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:14px 32px;justify-content:space-between;align-items:center}
+
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1.5fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px));background:#fff;border-top:1px solid var(--line);box-shadow:0 -6px 20px -12px rgba(0,0,0,.3);transition:transform .25s}
+.mbar .btn{min-height:46px;font-size:.95rem;padding:0 10px}
+.mbar.hide{transform:translateY(110%)}
+@media (min-width:900px){.mbar{display:none}}
+</style>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-mark" viewBox="0 0 26 34" fill="none" stroke="#9695D2" stroke-width="1.6" stroke-linejoin="round"><path d="M20 2 6 9.5l7 4.5L20 9.5z"/><path d="M6 9.5v6l7 4.5v-6z"/><path d="M20 18.5 13 14v6l7 4.5z"/><path d="M20 18.5v6L6 32v-6z"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/></symbol>
+</defs></svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#check" aria-label="Smartec"><svg><use href="#i-mark"/></svg>smartec</a>
+    <div class="top-r">
+      <a class="call js-call" href="tel:03303830034" data-track="header_call">Call <b>0330 383 0034</b></a>
+      <a class="btn btn-lav js-to-form" href="#check" data-track="header_cta">Book my free check <svg><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero dark" aria-labelledby="h1">
+    <div class="wrap">
+      <div class="hero-copy">
+        <span class="status"><i aria-hidden="true"></i>Compliance active. Inspection ready.</span>
+        <h1 id="h1">Fire compliance, <em>fixed.</em> From £29.99 per month.</h1>
+        <p class="sub">Scheduled fire alarm testing by BAFE accredited engineers, plus a free digital logbook and compliance portal. No big upfront invoices. No paperwork to lose.</p>
+        <div class="rating">
+          <span class="stars" aria-label="5 out of 5 stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
+          <span><b>5.0</b> on Google</span>
+          <span class="sep" aria-hidden="true"></span>
+          <span>Trusted at <b>Battersea Power Station</b> &amp; <b>Burberry HQ</b></span>
+        </div>
+        <ul class="ticks">
+          <li><svg><use href="#i-check"/></svg>BAFE accredited</li>
+          <li><svg><use href="#i-check"/></svg>NSI Gold</li>
+          <li><svg><use href="#i-check"/></svg>FIA Member</li>
+          <li><svg><use href="#i-check"/></svg>Constructionline Gold</li>
+        </ul>
+      </div>
+
+      <div class="card" id="check">
+        <div class="card-top">
+          <h2>Book your free compliance check</h2>
+          <p>Takes 30 seconds. See your fixed monthly price before you commit.</p>
+          <div class="bar" aria-hidden="true"><span class="on"></span><span></span></div>
+        </div>
+        <div class="card-body">
+          <form id="lead" novalidate>
+            <div class="hp" aria-hidden="true"><label for="f-web">Leave empty</label><input id="f-web" name="website" tabindex="-1" autocomplete="off"></div>
+
+            <div class="step" data-step="1">
+              <fieldset>
+                <legend class="q">Roughly how many fire alarm devices?<small>Smoke and heat detectors plus call points. A guess is fine.</small></legend>
+                <div class="chips">
+                  <div class="opt"><input type="radio" id="d1" name="devices" value="Under 10"><label for="d1">Under 10</label></div>
+                  <div class="opt"><input type="radio" id="d2" name="devices" value="10 to 30"><label for="d2">10 to 30</label></div>
+                  <div class="opt"><input type="radio" id="d3" name="devices" value="30 to 75"><label for="d3">30 to 75</label></div>
+                  <div class="opt"><input type="radio" id="d4" name="devices" value="75 to 150"><label for="d4">75 to 150</label></div>
+                  <div class="opt"><input type="radio" id="d5" name="devices" value="150+"><label for="d5">150+</label></div>
+                  <div class="opt"><input type="radio" id="d6" name="devices" value="Not sure"><label for="d6">Not sure</label></div>
+                </div>
+                <p class="err" id="err-devices" role="alert"></p>
+              </fieldset>
+              <fieldset>
+                <legend class="q">Do you also need security cover?</legend>
+                <div class="chips two-col">
+                  <div class="opt"><input type="radio" id="sec-n" name="security" value="Fire only" checked><label for="sec-n">Fire only</label></div>
+                  <div class="opt"><input type="radio" id="sec-y" name="security" value="Fire + CCTV, access or intruder"><label for="sec-y">Add CCTV / access / alarm</label></div>
+                </div>
+              </fieldset>
+              <div class="field">
+                <label for="f-postcode">Site postcode</label>
+                <input id="f-postcode" name="postcode" autocomplete="postal-code" placeholder="e.g. ME14 5NZ" required>
+                <p class="err" id="err-postcode" role="alert"></p>
+              </div>
+              <div class="nav"><button type="button" class="btn btn-lav js-next">See my fixed price <svg><use href="#i-arrow"/></svg></button></div>
+            </div>
+
+            <div class="step" data-step="2" hidden>
+              <p class="q">Where should we send your price?</p>
+              <div class="row2">
+                <div class="field"><label for="f-name">Full name</label><input id="f-name" name="name" autocomplete="name" required><p class="err" id="err-name" role="alert"></p></div>
+                <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required><p class="err" id="err-phone" role="alert"></p></div>
+              </div>
+              <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required><p class="err" id="err-email" role="alert"></p></div>
+              <div class="field"><label for="f-company">Company <span>(optional)</span></label><input id="f-company" name="company" autocomplete="organization"></div>
+              <label class="consent" for="f-consent"><input type="checkbox" id="f-consent" name="consent"><span>Send me booking reminders and occasional fire and security tips by text and email. Opt out any time.</span></label>
+              <div class="nav"><button type="button" class="back js-back">Back</button><button type="submit" class="btn btn-lav js-submit">Book my free check</button></div>
+            </div>
+          </form>
+
+          <div class="done" id="done" hidden tabindex="-1">
+            <span class="done-ico"><svg><use href="#i-check"/></svg></span>
+            <h3>Thanks <span class="js-done-name"></span>, your free check is requested.</h3>
+            <ol>
+              <li>A local engineer calls to arrange a time.</li>
+              <li>They review your system and records on site.</li>
+              <li>You get your fixed monthly price. No obligation.</li>
+            </ol>
+            <p class="ref">Reference <span class="js-ref"></span> &middot; Questions? Call 0330 383 0034</p>
+          </div>
+          <p class="small" id="small"><svg><use href="#i-lock"/></svg>No obligation. We never share your details.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="trust">
+    <div class="wrap">
+      <div class="accs" aria-label="Accreditations">
+        <div class="acc"><b>BAFE</b><span>SP203 Fire</span></div>
+        <div class="acc"><b>NSI Gold</b><span>Security</span></div>
+        <div class="acc"><b>FIA</b><span>Member</span></div>
+        <div class="acc"><b>Constructionline</b><span>Gold</span></div>
+      </div>
+      <p class="clients">Trusted on landmark projects including <b>Battersea Power Station</b>, <b>Burberry HQ</b> and the <b>University of Roehampton</b>.</p>
+    </div>
+  </div>
+
+  <section class="vs" aria-labelledby="h-vs">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Why switch</p>
+        <h2 id="h-vs">Traditional contracts cost more than money</h2>
+      </div>
+      <div class="vs-grid">
+        <div class="col col-old">
+          <h3>The old way</h3>
+          <ul>
+            <li><svg><use href="#i-x"/></svg><p><b>The cash-flow hit</b>Large upfront invoices, or a fresh call-out charge every time an engineer visits.</p></li>
+            <li><svg><use href="#i-x"/></svg><p><b>The paperwork trap</b>Paper logbooks and certificates buried in email, exactly when an inspector or insurer asks.</p></li>
+            <li><svg><use href="#i-x"/></svg><p><b>No asset clarity</b>Little idea what's installed, its test history, or whether you're compliant right now.</p></li>
+          </ul>
+        </div>
+        <div class="col col-new">
+          <h3>Smartec Fixed</h3>
+          <ul>
+            <li><svg><use href="#i-check"/></svg><p><b>One predictable monthly cost</b><span>From £29.99 + VAT. No surprise invoices and no big capital outlay.</span></p></li>
+            <li><svg><use href="#i-check"/></svg><p><b>Free digital logbook &amp; portal</b><span>Every certificate and asset in one place, with live compliance status.</span></p></li>
+            <li><svg><use href="#i-check"/></svg><p><b>Inspection-ready on demand</b><span>Pull up records for inspectors, insurers or landlords in seconds, not days.</span></p></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark" aria-labelledby="h-price">
+    <div class="wrap price-grid">
+      <div>
+        <div class="head">
+          <p class="eyebrow">Everything included</p>
+          <h2 id="h-price" style="color:#fff">Everything you need to stay compliant, in one flat fee</h2>
+          <p>Designed and maintained by accredited local engineers.</p>
+        </div>
+        <ul class="feat">
+          <li><span class="ck"><svg><use href="#i-check"/></svg></span><p><b>Scheduled fire alarm testing</b><span>Mandatory testing carried out on schedule by BAFE accredited engineers.</span></p></li>
+          <li><span class="ck"><svg><use href="#i-check"/></svg></span><p><b>Guaranteed response times</b><span>Priority dispatch for contract clients, with 24/7 support.</span></p></li>
+          <li><span class="ck"><svg><use href="#i-check"/></svg></span><p><b>No upfront upgrades</b><span>One monthly cost. No surprise invoices.</span></p></li>
+          <li><span class="ck"><svg><use href="#i-check"/></svg></span><p><b>Security cover too</b><span>Add CCTV, access control and intruder alarms to the same contract and portal.</span></p></li>
+        </ul>
+      </div>
+      <div class="price">
+        <p class="eyebrow">Smartec Fixed</p>
+        <p class="amount"><sup>£</sup>29.99</p>
+        <p class="per">+ VAT per month, from</p>
+        <a class="btn btn-lav js-to-form" href="#check" data-track="price_cta">Book my free check <svg><use href="#i-arrow"/></svg></a>
+        <small>Your exact fixed price depends on the size of your system and is confirmed at your free check.</small>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-steps">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Getting started</p>
+        <h2 id="h-steps">Switching takes three simple steps</h2>
+        <p>We handle the changeover from your current provider, so there's nothing for you to untangle.</p>
+      </div>
+      <ol class="steps">
+        <li><b>1</b><h3>Free compliance check</h3><p>A local engineer reviews your systems and records, then confirms your fixed monthly price. No obligation.</p></li>
+        <li><b>2</b><h3>We switch you over</h3><p>We take over your testing schedule and load your assets into the digital portal. You don't lift a finger.</p></li>
+        <li><b>3</b><h3>Fixed cover, full visibility</h3><p>Testing runs on schedule, records stay inspection-ready, and your status is always one login away.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="dark proof" aria-label="What clients say">
+    <div class="wrap">
+      <blockquote>
+        <span class="stars" aria-label="5 out of 5 stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
+        <p>"I can't remember them ever letting me down in the probably 8 to 10 years that we have been working together."</p>
+        <cite>Mr H. Gibbons</cite>
+      </blockquote>
+      <ul class="names">
+        <li class="lbl">The same team behind</li>
+        <li><svg><use href="#i-check"/></svg>Battersea Power Station</li>
+        <li><svg><use href="#i-check"/></svg>Burberry HQ</li>
+        <li><svg><use href="#i-check"/></svg>Savills</li>
+        <li><svg><use href="#i-check"/></svg>Kier &amp; Equans</li>
+        <li><svg><use href="#i-check"/></svg>Peel Ports</li>
+        <li><svg><use href="#i-check"/></svg>University of Roehampton</li>
+      </ul>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-faq">
+    <div class="wrap">
+      <div class="head"><p class="eyebrow">Good to know</p><h2 id="h-faq">Questions answered</h2></div>
+      <div class="faq">
+        <details><summary>Is fire alarm maintenance really a legal requirement?</summary><p>Yes. The Regulatory Reform (Fire Safety) Order 2005 places a legal duty on building owners and managers to keep fire alarm systems regularly tested and maintained. Non-compliance can lead to fines and, in the most serious cases, imprisonment.</p></details>
+        <details><summary>What does the £29.99 cover?</summary><p>Scheduled mandatory fire alarm testing, the free digital logbook and compliance portal, inspection-ready records, priority response with 24/7 support, and no upfront upgrade costs. Your exact price depends on the size of your system and is confirmed at the free check.</p></details>
+        <details><summary>I'm tied into a contract with my current provider. Can I still switch?</summary><p>Yes. Book your free check now and tell us when your current contract ends. We'll plan the changeover around it and handle the handover for you.</p></details>
+        <details><summary>What is the digital logbook and portal?</summary><p>An online record of every certificate, asset and test for your building. You can see your compliance status any time and share records with inspectors, insurers or landlords in seconds.</p></details>
+        <details><summary>Do you cover security systems as well as fire?</summary><p>Yes. CCTV, access control and intruder alarms can be added to the same contract and the same portal.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="final dark" aria-labelledby="h-final">
+    <div class="wrap">
+      <h2 id="h-final">Ready to fix your fire compliance cost?</h2>
+      <p>Book a free, no-obligation compliance check with a local Smartec engineer. See your fixed monthly price before you commit to anything.</p>
+      <div class="final-ctas">
+        <a class="btn btn-lav js-to-form" href="#check" data-track="final_cta">Book my free check <svg><use href="#i-arrow"/></svg></a>
+        <a class="call js-call" href="tel:03303830034" data-track="final_call">Or call <b>0330 383 0034</b></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="logo" style="font-size:1.2rem"><svg><use href="#i-mark"/></svg>smartec</span>
+    <span>Complete innovative building solutions &middot; Smartec Integrated Systems Ltd, company no. 10317117</span>
+  </div>
+</footer>
+
+<div class="mbar" id="mbar">
+  <a class="btn btn-ghost js-call" href="tel:03303830034" data-track="mbar_call"><svg><use href="#i-phone"/></svg>Call</a>
+  <a class="btn btn-lav js-to-form" href="#check" data-track="mbar_cta">Book my free check</a>
+</div>
+<script>
+(function(){
+  "use strict";
+
+  // URL that accepts a JSON POST (CRM, Zapier, Make or a WordPress handler). Set before going live.
+  var ENDPOINT = "";
+
+  var $ = function(s, r){ return (r || document).querySelector(s); };
+  var $$ = function(s, r){ return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  window.dataLayer = window.dataLayer || [];
+  function track(event, data){ var o = { event: event }; for (var k in data) o[k] = data[k]; window.dataLayer.push(o); }
+
+  // UTM and ad click IDs
+  var attrib = {};
+  try { attrib = JSON.parse(sessionStorage.getItem("smartec_attrib") || "{}"); } catch(e) {}
+  try {
+    var qs = new URLSearchParams(location.search);
+    ["utm_source","utm_medium","utm_campaign","utm_term","utm_content","gclid","gbraid","wbraid","fbclid","msclkid"].forEach(function(k){ if (qs.get(k)) attrib[k] = qs.get(k); });
+    if (!attrib.landing) attrib.landing = location.pathname;
+    if (!attrib.referrer && document.referrer) attrib.referrer = document.referrer;
+    sessionStorage.setItem("smartec_attrib", JSON.stringify(attrib));
+  } catch(e) {}
+
+  var form = $("#lead"), steps = $$(".step", form), bars = $$(".bar span"), cur = 1, started = false;
+  function show(n){
+    cur = n;
+    steps.forEach(function(s){ s.hidden = Number(s.dataset.step) !== n; });
+    bars.forEach(function(b, i){ b.classList.toggle("on", i < n); });
+    if (n === 2) $("#f-name").focus({ preventScroll: true });
+    track("lead_step", { step: n });
+  }
+  function err(id, msg, el){ var e = $("#err-" + id); if (e) e.textContent = msg || ""; if (el) el.setAttribute("aria-invalid", msg ? "true" : "false"); return !msg; }
+  function okPhone(p){ var d = p.replace(/[^\d+]/g, ""); if (d.indexOf("+44") === 0) d = "0" + d.slice(3); d = d.replace(/\D/g, ""); return d.length >= 10 && d.length <= 11 && d[0] === "0"; }
+  function check(n){
+    var ok = true;
+    if (n === 1) {
+      var pc = $("#f-postcode");
+      ok = err("devices", $('input[name="devices"]:checked', form) ? "" : "Pick a rough number. Not sure is fine.");
+      ok = err("postcode", /^[A-Z]{1,2}\d[A-Z\d]?\s*\d[A-Z]{2}$/i.test(pc.value.trim()) ? "" : "Enter a full UK postcode, like ME14 5NZ.", pc) && ok;
+    } else {
+      var nm = $("#f-name"), ph = $("#f-phone"), em = $("#f-email");
+      ok = err("name", nm.value.trim().length > 1 ? "" : "Enter your name.", nm);
+      ok = err("phone", okPhone(ph.value) ? "" : "Enter a UK phone number so an engineer can call you.", ph) && ok;
+      ok = err("email", /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em.value.trim()) ? "" : "Enter a valid email address.", em) && ok;
+    }
+    if (!ok) { var bad = $('.step[data-step="' + n + '"] [aria-invalid="true"]', form); if (bad) bad.focus(); }
+    return ok;
+  }
+  form.addEventListener("change", function(e){
+    if (!started) { started = true; track("lead_start", {}); }
+    if (e.target.name === "devices") err("devices", "");
+  });
+  $(".js-next", form).addEventListener("click", function(){ if (check(1)) show(2); });
+  $(".js-back", form).addEventListener("click", function(){ show(1); });
+  form.addEventListener("keydown", function(e){ if (e.key === "Enter" && cur === 1 && e.target.tagName === "INPUT") { e.preventDefault(); if (check(1)) show(2); } });
+
+  var dbP = (window.claude && window.claude.use) ? window.claude.use("db").catch(function(){ return null; }) : Promise.resolve(null);
+  function send(p){
+    var jobs = [dbP.then(function(db){ if (db) return db.collection("leads").add(p).catch(function(){}); })];
+    if (ENDPOINT) jobs.push(fetch(ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(p), keepalive: true }).catch(function(){}));
+    return Promise.all(jobs);
+  }
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    if (cur === 1) { if (check(1)) show(2); return; }
+    if (!check(2) || $("#f-web").value) return;
+    var btn = $(".js-submit", form); btn.disabled = true; btn.textContent = "Sending…";
+    var p = {
+      ref: "SM-" + Date.now().toString(36).toUpperCase().slice(-6), createdAt: new Date().toISOString(),
+      devices: $('input[name="devices"]:checked', form).value,
+      security: $('input[name="security"]:checked', form).value,
+      postcode: $("#f-postcode").value.trim().toUpperCase(),
+      name: $("#f-name").value.trim(), phone: $("#f-phone").value.trim(), email: $("#f-email").value.trim(),
+      company: $("#f-company").value.trim(), marketingConsent: $("#f-consent").checked, attribution: attrib
+    };
+    send(p).then(function(){
+      track("generate_lead", { devices: p.devices, security: p.security });
+      form.hidden = true; $("#small").hidden = true;
+      $(".js-done-name").textContent = p.name.split(" ")[0]; $(".js-ref").textContent = p.ref;
+      var d = $("#done"); d.hidden = false; d.focus();
+      bars.forEach(function(b){ b.classList.add("on"); });
+    });
+  });
+
+  document.addEventListener("click", function(e){
+    var a = e.target.closest("[data-track]");
+    if (!a) return;
+    track(a.classList.contains("js-call") ? "phone_click" : "cta_click", { cta: a.dataset.track });
+    if (a.classList.contains("js-to-form")) {
+      e.preventDefault();
+      $("#check").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+    }
+  });
+
+  var mbar = $("#mbar");
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function(en){ mbar.classList.toggle("hide", en[0].isIntersecting); }, { threshold: 0.25 }).observe($("#check"));
+  }
+})();
+</script>
